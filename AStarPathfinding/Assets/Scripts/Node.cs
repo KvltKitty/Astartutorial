@@ -4,6 +4,8 @@ using System.Collections;
 public class Node : MonoBehaviour {
 	public Transform[] adjList;
 
+	public Node parent;
+
 	public bool isWalkable;
 	public int row;
 	public int column;
@@ -11,6 +13,7 @@ public class Node : MonoBehaviour {
 	public int g;
 	public int h;
 	public int totalScore;
+	public int timeAdded;
 
 	// Use this for initialization
 	void Awake () {

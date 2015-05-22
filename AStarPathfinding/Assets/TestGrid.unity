@@ -129,12 +129,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 5
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &7813546
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -406,12 +408,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &116972344
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -493,12 +497,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 4
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &118193553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -588,12 +594,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 5
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &171019900
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -675,12 +683,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 4
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &206644136
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -902,12 +912,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 2
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &246529447
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1039,12 +1051,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 4
   column: 6
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &268851994
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1146,12 +1160,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &296284980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1233,12 +1249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 3
   column: 4
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &297122732
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1390,12 +1408,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 3
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &345995053
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1539,12 +1559,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 2
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &384696596
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1630,12 +1652,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 6
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &430942187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1971,12 +1995,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 1
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &665441115
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2058,12 +2084,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 4
   column: 4
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &675970311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2153,12 +2181,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 7
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &690644515
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2302,12 +2332,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 8
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &749776538
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2494,7 +2526,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 840412277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .354000002, y: .947000027, z: 0}
+  m_LocalPosition: {x: -.953999996, y: .992999971, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2556,12 +2588,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 3
   column: 6
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &848352022
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2929,12 +2963,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 1
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &977257862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3114,7 +3150,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1047459412}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .312000006, y: .0179999992, z: 0}
+  m_LocalPosition: {x: .312000006, y: -.0719999969, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3255,12 +3291,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 4
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1074918399
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3466,12 +3504,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 5
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1147391213
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3553,12 +3593,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 2
   column: 6
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1149567653
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3640,12 +3682,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 5
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1177727210
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3789,12 +3833,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 8
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1212668429
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3876,12 +3922,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 7
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1229869412
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3983,12 +4031,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 9
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1323515063
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4276,12 +4326,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 4
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1447255550
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4429,12 +4481,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 2
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1493128526
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4516,12 +4570,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 2
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1509569878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4673,12 +4729,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 6
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1714898961
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4888,12 +4946,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 9
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1751789642
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5099,12 +5159,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 3
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1774918219
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5252,12 +5314,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 3
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1790336209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5339,12 +5403,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 0
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1800092591
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5426,12 +5492,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1801198691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5645,12 +5713,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 6
   column: 1
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1909535023
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5794,12 +5864,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 3
   column: 10
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1947760827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5893,12 +5965,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 2
   column: 4
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &1970964573
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6108,12 +6182,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   adjList: []
+  parent: {fileID: 0}
   isWalkable: 1
   row: 1
   column: 0
   g: 0
   h: 0
   totalScore: 0
+  timeAdded: 0
 --- !u!61 &2020786514
 BoxCollider2D:
   m_ObjectHideFlags: 0

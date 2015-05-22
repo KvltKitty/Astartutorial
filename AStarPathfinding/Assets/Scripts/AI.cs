@@ -32,6 +32,9 @@ public class AI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Input.GetKeyDown (KeyCode.KeypadEnter)){
+			printCurPath();
+		}
 		if(player == null){
 			player = _brain.player;
 		}
@@ -59,8 +62,10 @@ public class AI : MonoBehaviour {
 					resetColors (path);
 				}
 				path = calculatePath ();
+				if(path != null){
 				setColors (path);
 				moveAlongPath(path);
+				}
 			}
 		}
 	}
@@ -81,6 +86,8 @@ public class AI : MonoBehaviour {
 
 	private void moveAlongPath(List<Node> Path){
 		if(Mathf.Abs (Vector3.Distance (transform.position, path[0].transform.position)) <= 0.01){
+			Color temp = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+			path[0].gameObject.GetComponent<SpriteRenderer>().color = temp;
 			path.RemoveAt(0);
 		}
 		transform.position = Vector2.MoveTowards (transform.position, path[0].transform.position, speed);
@@ -97,44 +104,79 @@ public class AI : MonoBehaviour {
 		openList.Clear ();
 		closedList.Clear ();
 		curNodeCheck = curNode;
-		int i = 0;
-		while(curNodeCheck != playerNode){
-			i++;
-			_node = curNodeCheck.GetComponent<Node>();
-			Transform[] curAdjList = _node.adjList;
-			for(int j = 0; j < curAdjList.Length; j++){
-				if(curAdjList[j] != null){
-					if(closedList.Exists(x=>x.transform == curAdjList[j].gameObject.GetComponent<Node>().transform)){
-						//if in closed list, ignore
-					}
-					else if(!openList.Exists (x=>x.transform == curAdjList[j].gameObject.GetComponent<Node>().transform)){
-						curAdjList[j].gameObject.GetComponent<Node>().assignScore(i, playerNode.gameObject.GetComponent<Node>());
-						if(curAdjList[j].gameObject.GetComponent<Node>().isWalkable){
-							openList.Add (curAdjList[j].gameObject.GetComponent<Node>());
-						}
-					}
-					else if(openList.Exists (x=>x.transform == curAdjList[j].gameObject.GetComponent<Node>().transform)){
-						int temp = curAdjList[j].gameObject.GetComponent<Node>().totalScore;
-						if((i + curAdjList[j].gameObject.GetComponent<Node>().h) < temp){
-							curAdjList[j].gameObject.GetComponent<Node>().assignScore(i, playerNode.gameObject.GetComponent<Node>());
-						}
+		Debug.Log ("Cur Node Pathfinding is " + curNode.transform.name);
+		curNodeCheck.gameObject.GetComponent<Node>().assignScore (0, playerNode.gameObject.GetComponent<Node>());
+		curNodeCheck.gameObject.GetComponent<Node>().parent = null;
+		openList.Add (curNodeCheck.gameObject.GetComponent<Node>());
+		while(openList.Any ()){
+			curNodeCheck = getLowest (openList);
+			if(curNodeCheck == playerNode){
+				return constructPath ();
+			}
+			openList.Remove (curNodeCheck.gameObject.GetComponent<Node>());
+			closedList.Add (curNodeCheck.gameObject.GetComponent<Node>());
+			Transform[] adjList = curNodeCheck.gameObject.GetComponent<Node>().adjList;
+			foreach(Transform obj in adjList){
+				if(closedList.Exists (x=>x.transform == obj)){
+					continue;
+				}
+				if(!obj.gameObject.GetComponent<Node>().isWalkable){
+					continue;
+				}
+				int tenativeG = curNode.gameObject.GetComponent<Node>().g + 1;
+
+				if(!openList.Exists (x=>x.transform == obj) || tenativeG < obj.gameObject.GetComponent<Node>().g){
+					obj.gameObject.GetComponent<Node>().parent = curNodeCheck.gameObject.GetComponent<Node>();
+					obj.gameObject.GetComponent<Node>().assignScore(tenativeG, playerNode.gameObject.GetComponent<Node>());
+					if(!openList.Exists (x=>x.transform == obj)){
+						openList.Add (obj.gameObject.GetComponent<Node>());
 					}
 				}
 			}
-			//sort the open list
-			openList = openList.OrderBy(o=>o.totalScore).ToList ();
-			curNodeCheck = openList[0].transform;
-			closedList.Add (openList[0]);
-			openList.RemoveAt (0);
 
 		}
-		int n = 0;
-		foreach(Node obj in closedList){
-			Debug.Log (n + " " + obj.transform.name + " " + obj.totalScore);
-			n++;
-		}
+
 
 		return closedList;
+	}
+
+	private Transform getLowest(List<Node> openList){
+		//openList = openList.OrderBy(o=>o.totalScore).ToList ();
+		int lowest = 999;
+		Transform temp = openList[0].transform;
+		foreach(Node obj in openList){
+			if(obj.totalScore <= lowest){
+				lowest = obj.totalScore;
+				temp = obj.transform;
+			}
+		}
+
+		return temp;
+	}
+
+	private List<Node> constructPath(){
+		Node temp = playerNode.gameObject.GetComponent<Node>();
+		Debug.Log ("Construct Path");
+		while(temp.parent != null){
+			path.Add (temp);
+			temp = temp.parent;
+		}
+		/*for(int i = 0; i < 7; i++){
+			path.Add (temp);
+			temp = temp.parent;
+			Debug.Log (temp.parent.name);
+		}*/
+		path.Reverse();
+		return path;
+	}
+
+	private void printCurPath(){
+		if(path != null){
+			Debug.Log ("Path");
+			foreach(Node obj in path){
+				Debug.Log(obj.transform.name + " G: " + obj.g + " H: " + obj.h);
+			}
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
