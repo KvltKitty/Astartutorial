@@ -16,25 +16,30 @@ public class gridBrain : MonoBehaviour {
 		foreach(Transform obj in curNode)
 		{
 			Node node = obj.GetComponent<Node>();
-
+			if(obj.tag.Equals("Unwalkable")){
+				node.setIsWalkable(false);
+			}
+			else{
+				node.setIsWalkable(true);
+			}
 			int row = node.row;
 			int column = node.column;
 			//Debug.Log (row + " " + column);
 			if(row - 1 >= 0)
 			{
-				node.topAdj = transform.FindChild((row - 1).ToString() + "_" + column.ToString());
+				node.adjList[0] = transform.FindChild((row - 1).ToString() + "_" + column.ToString());
 			}
 			if(row + 1 <= 6)
 			{
-				node.botAdj = transform.FindChild((row + 1).ToString() + "_" + column.ToString());
+				node.adjList[1] = transform.FindChild((row + 1).ToString() + "_" + column.ToString());
 			}
 			if(column - 1 >= 0)
 			{
-				node.leftAdj = transform.FindChild(row.ToString() + "_" + (column - 1).ToString());
+				node.adjList[2] = transform.FindChild(row.ToString() + "_" + (column - 1).ToString());
             }
 			if(column + 1 <= 10)
 			{
-				node.rightAdj = transform.FindChild(row.ToString() + "_" + (column + 1).ToString());
+				node.adjList[3] = transform.FindChild(row.ToString() + "_" + (column + 1).ToString());
 			}
 			
 		}
@@ -48,5 +53,9 @@ public class gridBrain : MonoBehaviour {
 		if(_player.curNode != playerNode){
 			playerNode = _player.curNode;
 		}
+	}
+
+	public Transform getPlayerNode(){
+		return _player.curNode;
 	}
 }
